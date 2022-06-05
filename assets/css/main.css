@@ -740,29 +740,16 @@ option.form__font-option {
 .certificate__setting:not(:last-of-type) {
     /* margin-right: 74px; */
 }
-.textbox {
-    position: absolute;
-    top: 0; left: 0;
-    /* width: 100px;
-    height: 100px; */
-    border: 2px solid rgb(0, 0, 0);
-    background-color: rgba(183, 221, 255, 0);
-    z-index: 30;
-}
-.textbox__text {
-    display: inline-block;
-    /* background-color: rgba(255, 211, 233, 0.801); */
-    /* border: 1px solid rgb(94, 94, 94); */
-}
+
 /*//Certificate*/
 /*Fields template*/
-#template-color {
+.template-color {
     position: relative;
     padding: 0;
     height: 46px;
     overflow: hidden;
 }
-#template-color input {
+.template-color input {
     position: absolute;
     top: -8px;
     left: -8px;
@@ -770,7 +757,7 @@ option.form__font-option {
     width: 150%;
     height: 150%;
 }
-#select-font {
+.select-font {
     padding-left: 37px;
 }
 #preview-text {
@@ -812,4 +799,57 @@ option.form__font-option {
 .main-settings__arrow::before {
     width: 15px;
     height: 15px;
+}
+.textbox {
+    position: absolute;
+    top: 0; left: 0;
+    /* width: 100px;
+    height: 100px; */
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgba(183, 221, 255, 0);
+    z-index: 30;
+}
+.textbox__popup {
+    width: auto;
+    justify-content: start;
+    min-height: 34px;
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: -7px 22px 30px rgb(8 27 92 / 8%), 2px -7px 14px rgb(21 128 255 / 9%);
+}
+.textbox__text {
+    display: inline-block;
+}
+.textbox__field {
+    display: block;
+    height: 34px;
+    padding: 5px 0;
+    max-width: 180px;
+}
+.textbox__field:not(:first-child) {
+    margin-left: 10px;
+}
+.textbox__field.template-color {
+    width: 40px;
+    height: 38px;
+    flex-shrink: 0;
+}
+.textbox__field.template-fontsize {max-width: 90px;
+    padding-left: 20px;
+}
+.textbox__field.select-font {
+    text-align: left !important;
+    padding-left: 20px;
+}
+.textbox__number {
+    width: 110px;
+    padding-left: 5px;
+}
+input.textbox__number {
+    width: 80%;
 }

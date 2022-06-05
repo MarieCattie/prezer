@@ -56,9 +56,55 @@ require "assets/php/functions.php";
                 </div>
                 <!-- Template Preview -->
                <div class="certificate__preview">
+                   <!-- КАРТИНКА ПРЕВЬЮ -->
                     <div class="textbox hidden">
+                        <!-- НАСТРОЙКИ - ВСПЛЫВАЮЩЕЕ ОКНО -->
+                    <div class="popup textbox__popup">
+                        <!-- ШРИФТ -->
+                        <div title="Выберите шрифт" class="form__field form__field-select textbox__field">
+                            <p class="select-font textbox__field"></p>
+                            <select name="template-font-popup" class="form__font form__select">
+                                <option class="form__field form__font-option" value="Montserrat">Montserrat</option>
+                                <option class="form__field form__font-option" value="SourceSansPro" style="font-family: 'SourceSansPro';">SourceSansPro</option>
+                                <option class="form__field form__font-option" style="font-family: 'Roboto';" value="Roboto">Roboto</option>
+                            </select>
+                        </div>
+                        <!-- РАЗМЕР ШРИФТА -->
+                        <input title="Размер шрифта" type="number" class="form__field textbox__field template-fontsize" value="34" min="10" max="288" name="template-fontsize-popup">
+                        <!-- ЦВЕТ -->
+                        <div title="Цвет текста" class="form__field template-color textbox__field" >
+                           <input type="color" class="color" name="color-popup" style="z-index: 5;"> 
+                        </div>
+                        <div title="Выравнивание текста" class="form__field textbox__field">
+                            <!-- ВЫРАВНИВАНИЕ -->
+                        <input title="По левому краю" type="radio" name="align" value="left" class="align-left" class="align" checked> Left
+                        <input title="По центру" type="radio" name="align" value="center" class="align-center" class="align"> Center
+                        <input title="По правому краю" type="radio" name="align" value="right" class="align-right" class="align"> Right
+                        </div>
+                        <!-- ширина блока -->
+                        <div title="Ширина рабочей области" class="form__field textbox__field textbox__number">
+                           <input type="number" class="textbox__number width" name="width2" value="904"> 
+                        </div>
+                        <!-- ВЫСОТА БЛОКА -->
+                        <div title="Высота рабочей области" class="form__field textbox__field textbox__number">
+                        <input type="number" class="textbox__number height" name="height2" value="100">
+                        </div>
+                        <!-- Отступ слева -->
+                        <div title="Отступ слева" class="form__field textbox__field textbox__number">
+                        <input type="number" class="left textbox__number" name="left2" value="0">
+                        </div>
+                        <!-- Отступ справа -->
+                        <div title="Отступ справа" class="form__field textbox__field textbox__number">
+                            <input type="number" class="right textbox__number" name="right2" value="0">
+                        </div>
+                        <!-- Отступ сверху -->
+                        <div title="Отступ сверху" class="form__field textbox__field textbox__number">
+                            <input type="number" class="top textbox__number" name="top2" value="0">
+                        </div>
+                        
+                    </div>   
                     <p class="text-size-test textbox__text">Иванов Иван</p>
-                </div>
+                    </div>
                    <img src="" alt="" class="template-preview-img certificate__img">
                 </div>
                
@@ -67,59 +113,58 @@ require "assets/php/functions.php";
                     <div class="certificate__setting">
                         <label for="template-font" class="title-marked form__label m-14">Шрифт</label>
                         <div class="form__field form__field-select">
-                        <p id="select-font"></p>
-                        <select name="template-font" id="form__font" class="form__select">
+                        <p class="select-font"></p>
+                        <select name="template-font" class="form__font form__select">
                             <option class="form__field form__font-option" value="Montserrat">Montserrat</option>
                             <option class="form__field form__font-option" value="SourceSansPro" style="font-family: 'SourceSansPro';">SourceSansPro</option>
                             <option class="form__field form__font-option" style="font-family: 'Roboto';" value="Roboto">Roboto</option>
                         </select>
                         </div>
-                        
                     </div>
                     <div class="certificate__setting">
-                        <label for="template-fontsize" class="title-marked form__label m-14">Выравнивание</label>
-                        <input type="radio" name="align" value="left" id="align-left" class="align" checked> Left
-                        <input type="radio" name="align" value="center" id="align-center" class="align"> Center
-                        <input type="radio" name="align" value="right" id="align-right" class="align"> Right
+                        <label class="title-marked form__label m-14">Выравнивание</label>
+                        <input type="radio" name="align2" value="left" class="align-left" class="align" checked> Left
+                        <input type="radio" name="align2" value="center" class="align-center" class="align"> Center
+                        <input type="radio" name="align2" value="right" class="align-right" class="align"> Right
                     </div>
                     <div class="certificate__setting">
                         <label for="template-fontsize" class="title-marked form__label m-14">Размер</label>
-                        <input type="number"  id="template-fontsize" class="form__field" value="34" min="10" max="288" name="template-fontsize">
+                        <input type="number"  id="template-fontsize" class="form__field template-fontsize" value="34" min="10" max="288" name="template-fontsize">
                     </div>
                     <div class="certificate__setting">
                         <label for="color" class="title-marked form__label m-14">Цвет</label>
-                        <div class="form__field"  id="template-color">
-                           <input type="color" id="color" name="color" style="z-index: 5;"> 
+                        <div class="form__field template-color">
+                           <input type="color" class="color" name="color" style="z-index: 5;"> 
                         </div>
                     </div>
                     <div class="certificate__setting">
                         <label for="width" class="title-marked form__label m-14">Выберите ширину блока</label>
                         <div class="form__field">
-                           <input type="number" id="width" name="width" value="904"> 
+                           <input type="number" class="width" name="width" value="904"> 
                         </div>
                     </div>
                     <div class="certificate__setting">
                         <label for="height" class="title-marked form__label m-14">Выберите высоту блока</label>
                         <div class="form__field">
-                        <input type="number" id="height" name="height" value="100">
+                        <input type="number" id="height" class="height" name="height" value="100">
                         </div>
                     </div>
                     <div class="certificate__setting">
                         <label for="left" class="title-marked form__label m-14">Выберите отступ слева</label>
                         <div class="form__field">
-                        <input type="number" id="left" name="left" value="0">
+                        <input type="number" id="left" class="left" name="left" value="0">
                         </div>
                     </div>
                     <div class="certificate__setting">
                         <label for="top" class="title-marked form__label m-14">Выберите отступ сверху</label>
                         <div class="form__field">
-                        <input type="number" id="top" name="top" value="0">
+                        <input type="number" class="top" id="top" name="top" value="0">
                         </div>
                     </div>
                     <div class="certificate__setting">
                         <label for="right" class="title-marked form__label m-14">Отступ справа</label>
                         <div class="form__field">
-                        <input type="number" id="right" name="right" value="0">
+                        <input type="number" class="right" id="right" name="right" value="0">
                         </div>
                     </div>
                     <div class="certificate__setting">

@@ -16,7 +16,7 @@ $(document).ready(function () {
     reader.readAsDataURL(input.files[0]);
   });
   $('.certificate__img').on('mousemove', function(e) {
-    console.log(e.offsetX + " " + e.offsetY);
+    // console.log(e.offsetX + " " + e.offsetY);
 })
 //Показываем текстовый блок при клике на область
 $('.certificate__img').on('click', function(e) {
@@ -26,18 +26,19 @@ $('.certificate__img').on('click', function(e) {
     $(".textbox").css({
         top: y,
         left: x,
-        width: $('#width').val(),
-        height: $('#height').val(),
+        width: $('.width').val(),
+        height: $('.height').val(),
         "textAlign": $('.align:checked').val()
       });
       $(".textbox .text-size-test").css({
-        "fontSize": Number($('#template-fontsize').val()),
+        "fontSize": Number($('.template-fontsize').val()),
       })
       $('#template-coordinate').val(x + ',' + y);
 })
 
 //Меняем ширину и высоту блока
-$('#width').on('input', function(e) {
+$('.width').on('input', function(e) {
+  $('.width').val($(this).val())
   if($(this).val() == '') {
     $(this).val(904)
   }
@@ -45,7 +46,8 @@ $('#width').on('input', function(e) {
         width: `${$(this).val()}px`,
       });
 })
-$('#height').on('input', function(e) {
+$('.height').on('input', function(e) {
+  $('.height').val($(this).val())
   if($(this).val() == '') {
     $(this).val(100)
   }
@@ -54,52 +56,60 @@ $('#height').on('input', function(e) {
       });
 })
 //Меняем отступы от краев блока
-$('#right').on('input', function() {
+$('.right').on('input', function() {
+  $('.right').val($(this).val())
     $(".textbox").css({
         paddingRight:`${$(this).val()}px`,
       });
 })
-$('#left').on('input', function() {
+$('.left').on('input', function() {
+  $('.left').val($(this).val())
     $(".textbox").css({
         paddingLeft:`${$(this).val()}px`,
       });
     // $('#right').val(Number($('#width').val()) - Number($(this).val()) - Number($('.textbox__text').width()).toFixed(0));
 })
-$('#top').on('input', function() {
+$('.top').on('input', function() {
+  $('.top').val($(this).val())
     $(".textbox").css({
         paddingTop:`${$(this).val()}px`,
       });
 })
-$('#bottom').on('input', function() {
+$('.bottom').on('input', function() {
     $(".textbox").css({
         paddingBottom:`${$(this).val()}px`,
       });
 })
-$('#align-left').on('change', function() {
+$('.align-left').on('change', function() {
+  $('.align-left').prop('checked', true)
   $(".textbox").css({
     textAlign: 'left',
   });
 })
-$('#align-right').on('change', function() {
+$('.align-right').on('change', function() {
+  $('.align-right').prop('checked', true)
   $(".textbox").css({
     textAlign: 'right',
   });
 })
-$('#align-center').on('change', function() {
+$('.align-center').on('change', function() {
+  $('.align-center').prop('checked', true)
   $(".textbox").css({
     textAlign:'center',
   });
 })
   //предпоказ по выбору размера шрифта
-  $("#template-fontsize").on('input', function () {
-    let size = Number($("#template-fontsize").val());
+  $(".template-fontsize").on('input', function () {
+    $(".template-fontsize").val($(this).val())
+    let size = Number($(this).val());
     $(".text-size-test").css({
       fontSize: size,
     });
   });
   //предпоказ для выбора цвета текста
-  $('#color').on('input', function() {
-    let color = String($('#color').val());
+  $('.color').on('input', function() {
+    $('.color').val($(this).val())
+    let color = String($(this).val());
     $('.text-size-test').css({
         color: color,
     });
@@ -107,8 +117,8 @@ $('#align-center').on('change', function() {
     const r = parseInt(colorrgb.substr(1,2), 16);
     const g = parseInt(colorrgb.substr(3,2), 16);
     const b = parseInt(colorrgb.substr(5,2), 16);
-  console.log(`red: ${r}, green: ${g}, blue: ${b}`);
-  $('#template-color-text').val(`${r},${g},${b}`);
+  // console.log(`red: ${r}, green: ${g}, blue: ${b}`);
+  $(this).closest('.template-color-text').val(`${r},${g},${b}`);
 })
 //предпоказ шрифта
 $('#form__font').on('input', function() {
@@ -117,4 +127,12 @@ $('#form__font').on('input', function() {
         fontFamily: valueSelected,
     });
 })
+
+//Показ панели при наведении на рабочую область
+$('.textbox').on('mouseover', function() {
+  $('.textbox__popup').fadeIn()
+});
+$('.textbox').on('mouseleave', function() {
+  $('.textbox__popup').fadeOut()
+});
 });
