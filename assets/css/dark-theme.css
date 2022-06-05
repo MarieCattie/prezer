@@ -1,0 +1,166 @@
+body {
+    background-color: #F8F8F8;
+}
+/*Titles*/
+.title {
+    color: #171832;
+}
+.postitle {
+    color: #171832;
+}
+.title-marked {
+    color: #171832;
+}
+.title-marked::before {
+    background-color: #2D74FF;
+}
+.title-bg {
+    background-color: #146BFF;
+    color: #FFFFFF;
+}
+.contact {
+    color: #171832;
+}
+
+.content-block-4__text {
+    color: #43609A;
+}
+.content-block-4:hover .content-block-4__text {
+    color: #2D74FF;
+}
+/*//Titles*/
+/*Buttons*/
+.second-btn {
+    color: #2D74FF;
+}
+.second-btn:hover {
+    color: #9E00FF;
+    border: 2px solid #9E00FF;
+}
+.action-btn {
+    background-image: linear-gradient(270deg, #0F6FFF 40%, #8450F2 80%);
+    color: #fff;
+}
+.btn-large {
+    background-image: linear-gradient(270deg, #0F6FFF 40%, #8450F2 80%);
+    color: #fff;
+}
+.circle {
+    background: #FFFFFF;
+    box-shadow: 0px 1px 14px rgba(23, 69, 158, 0.22);
+
+}
+.circle:hover {
+    box-shadow: 0px 1px 14px rgba(17, 96, 255, 0.555);
+}
+.arrow-left::before {
+    background-image: url(../img/icons/arrow-left.svg);
+}
+.arrow-right::before {
+    background-image: url(../img/icons/arrow-right.svg);
+}
+.close::before {
+    background-image: url(../img/icons/close.svg);
+}
+/*//Buttons*/
+/*Icons*/
+.icon {
+    background: #F6F8FF;
+    box-shadow: 0px 1px 14px rgba(23, 69, 158, 0.22);
+
+}
+/*//Icons*/
+/*Header*/
+.header__username {
+    background-image: linear-gradient(89.1deg, #007AFF -7.25%, #9E00FF 163.65%);
+}
+.avatar {
+    background-image: linear-gradient(180deg, #0F6FFF 0%, #8450F2 100%);
+}
+.avatar::before {
+    background-image: url(../img/icons/user.svg);
+}
+/*//Header*/
+/*Footer*/
+.footer {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(224, 235, 255, 0.2) 100%), rgba(45, 116, 255, 0.02);
+}
+.logo__slogan {
+    color: #87a1d5;
+}
+/*//Footer*/
+/*Containers*/
+.container-bg {
+    background-image: url(../img/lines-bg.svg);
+}
+.content-block {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.03);
+}
+.content-block-2 {
+    background-color: #fff;
+}
+/*//Containers*/
+/*Style for popups and login/logout*/
+.popup {
+    background: rgba(248, 248, 248, 0.51);
+    box-shadow: -7px 22px 30px rgba(8, 27, 92, 0.08), 2px -7px 30px rgba(21, 128, 255, .23);
+}
+.popup__message {
+    color: #ff0051;
+}
+/*Login/logout form*/
+.form__field {
+    background-color: #FDFDFD;
+    color: #171832;
+    box-shadow: 2px 4px 11px 4px rgba(0, 0, 0, 0.06);
+}
+.form__field:focus {
+    box-shadow: 3px 4px 13px 2px rgba(20, 106, 255, 0.226);
+}
+
+.form__field::placeholder {
+    color: #B7C2D8;
+}
+.form__link {
+    text-align: center;
+    color: #2D74FF;
+}
+.form__uploadtext {
+    color: #B7C2D8;
+}
+.form__uploadtext::before {
+    background-image: url(../img/icons/upload.svg);
+}
+.form__description {
+    color: #171832;
+}
+
+.form__field-select::after {
+    background-image: url(../img/icons/select.svg); 
+}
+
+.form__message {
+    color: #ff0051;
+}
+/*//Style for popups and login/logout*/
+/*Profile*/
+
+.profile__name {
+    color: #171832;
+}
+.profile__role {
+    color: #949494;
+}
+.profile__load {
+    background-color: rgba(4, 49, 82, 0.9);
+    color: #e6e6e6;
+}
+
+.logo-change__text {
+    color: #43609A;
+}
+.logo-change__text::before {
+    background-image: url(../img/icons/edit-image.svg);
+
+}
