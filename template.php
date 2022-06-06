@@ -159,7 +159,7 @@ require "assets/php/functions.php";
                         <label for="top" class="title-marked form__label m-14">Выберите отступ сверху</label>
                         <div class="form__field">
                         <input type="number" class="top" id="top" name="top" value="0">
-                        </div>
+                    </div>
                     </div>
                     <div class="certificate__setting">
                         <label for="right" class="title-marked form__label m-14">Отступ справа</label>
