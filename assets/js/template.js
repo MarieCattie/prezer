@@ -118,7 +118,7 @@ $('.align-center').on('change', function() {
     const g = parseInt(colorrgb.substr(3,2), 16);
     const b = parseInt(colorrgb.substr(5,2), 16);
   // console.log(`red: ${r}, green: ${g}, blue: ${b}`);
-  $(this).closest('.template-color-text').val(`${r},${g},${b}`);
+  $(this).closest('.container').find('#template-color-text').val(`${r},${g},${b}`);
 })
 //предпоказ шрифта
 $('#form__font').on('input', function() {
@@ -126,6 +126,11 @@ $('#form__font').on('input', function() {
     $('.text-size-test').css({
         fontFamily: valueSelected,
     });
+})
+$('.form__font').on('change', function () {
+  $('.textbox__text').css({
+    fontFamily: $(this).val(),
+  })
 })
 
 //Показ панели при наведении на рабочую область
