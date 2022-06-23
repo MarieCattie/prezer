@@ -14,6 +14,7 @@ require_once "assets/php/functions.php";
     src="https://code.jquery.com/jquery-3.6.0.js"
     integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
+   <script src="assets/js/jquery.min.js"></script> 
     <title>Prezer | Авторизация</title>
 </head>
 <body>
