@@ -16,16 +16,18 @@ $tmpfname = tempnam(sys_get_temp_dir(), "tmpxls");
 file_put_contents($tmpfname, $filecontent);
 //создаем объект с ссылкой на файл excel
 $excelObj = PHPExcel_IOFactory::load($tmpfname);
+//очищаем папку Сертификаты на сервере
+clearFolder();
 //пустой массив
 $studentsArr = array();
 //циклом проходим excel файл и записываем фамилии в массив
 for ($row = 1; $row <= $excelObj->setActiveSheetIndex(0)->getHighestRow(); $row++) {
     // $student = $worksheet->getCell('B' . $row)->getValue();
     $name = $excelObj->getActiveSheet()->getCell('B'.$row)->getValue();
-    $studentsArr[] = $name;
     if ($name == 'ФИО' || $name == 'фио') {
         continue;
     }
+    $studentsArr[] = $name;
 }
 //создание архива
 $zip = new ZipArchive();
@@ -218,6 +220,14 @@ $zip->addFile($_SERVER["DOCUMENT_ROOT"] .'/Сертификаты/' . $filename,
 $zip->close();
 readfile("students.zip");
 unlink("students.zip");
+function clearFolder() {
+    if(file_exists($_SERVER["DOCUMENT_ROOT"] .'/Сертификаты/')) {
+      foreach(glob($_SERVER["DOCUMENT_ROOT"] .'/Сертификаты/*') as $file) {
+        unlink($file);
+      }
+    }
+}
+
 
 
 
