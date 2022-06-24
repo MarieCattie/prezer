@@ -214,9 +214,8 @@ foreach($studentsArr as $student) {
     imagettftext($img, $template["font_size"], 0, $x, $y, $textcolor, $font, $student);
     imagejpeg($img, $_SERVER["DOCUMENT_ROOT"] .'/Сертификаты/' . $filename);
     imagedestroy($img);
-
+    $zip->addFile($_SERVER["DOCUMENT_ROOT"] .'/Сертификаты/' . $filename, 'sertificates/' . $filename);
 }
-$zip->addFile($_SERVER["DOCUMENT_ROOT"] .'/Сертификаты/' . $filename, 'sertificates/' . $filename);
 $zip->close();
 readfile("students.zip");
 unlink("students.zip");
