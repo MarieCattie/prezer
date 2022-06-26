@@ -58,7 +58,7 @@ $templates = $db->get("templates-user_id: " . $user["id"]);
                 <p class="templates__postitle postitle">Загрузите файл из Excel со списком участников, для которых хотите создать грамоты</p>
                 <div class="certificate__btns">
                 
-                <a href="" class="btn second-btn certificate__btn"><input name="load" type="file">Загрузить файл</a>
+                <a class="btn second-btn certificate__btn"><input name="load" type="file">Загрузить файл</a>
                 <button name="create" type="submit" class="btn btn-large action-btn certificate__btn">Создать</button>  
                 </div>
                 
