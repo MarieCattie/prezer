@@ -58,7 +58,7 @@ if ($_SESSION["message"] == '') {
                      </a>
                     <div class="profile__text">
                         <p class="profile__name"><?= $user["surname"] ?> <?=  $user["name"] ?></p>
-                        <p class="profile__role">Учитель</p>
+                        <!-- <p class="profile__role">Учитель</p> -->
                         <input type="submit" class="btn action-btn btn-small" id="load-agree" value="Загрузить" style="display: none">
                     </div>    
                     
@@ -67,10 +67,10 @@ if ($_SESSION["message"] == '') {
                             <span class="contact-icon"><img src="assets/img/icons/fluent_mail.svg" alt=""></span>
                             <?= $user["email"] ?>
                         </p>
-                        <p class="contact">
+                        <!-- <p class="contact">
                             <span class="contact-icon"><img src="assets/img/icons/entypo_phone.svg" alt=""></span>
                             <?= $user["phone"] ?>
-                        </p>
+                        </p> -->
                     </div>
                 </form>
                  <div class="container-flex profile__log">
@@ -152,10 +152,10 @@ if ($_SESSION["message"] == '') {
                     <label for="name" class="title-marked form__label m-14">Имя</label>
                     <input type="text" id="name" class="form__field" placeholder="Например, Иван" name="name" value="<?= $user["name"] ?>">
                 </div>
-                <div class="form__group">
+                <!-- <div class="form__group">
                     <label for="tel" class="title-marked form__label m-14">Телефон</label>
                     <input type="tel" id="tel" class="form__field" placeholder="Например, + 7(999) 999-99-99" name="phone" value="<?= $user["phone"] ?>">
-                </div>
+                </div> -->
                 <input type="submit" class="btn btn-large form__submit" name="editProfile" value="Обновить">
             </form>  
           </div>

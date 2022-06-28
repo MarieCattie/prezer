@@ -53,10 +53,10 @@ require_once "assets/php/functions.php";
                             <label for="name" class="title-marked form__label m-14">Имя</label>
                             <input type="text" id="name" class="form__field" placeholder="Например, Иван" name="name">
                         </div>
-                        <div class="form__group">
+                        <!-- <div class="form__group">
                             <label for="tel" class="title-marked form__label m-14">Телефон</label>
                             <input type="tel" id="tel" class="form__field" placeholder="Например, + 7(999) 999-99-99" name="phone">
-                        </div>
+                        </div> -->
                         <div class="form__group">
                             <label for="pwd" class="title-marked form__label m-14">Пароль</label>
                             <input type="password" id="pwd" class="form__field" name="password">

@@ -547,6 +547,7 @@ option.form__font-option {
 }
 .profile__person {
     display: flex;
+    align-items: center;
     margin-top: 10px;
 }
 .profile__avatar {
