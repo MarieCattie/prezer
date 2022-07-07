@@ -1,7 +1,6 @@
 <?php
 session_start();
 require "assets/php/Init.php";
-require "assets/php/functions.php";
 $templates = $db->get("templates-user_id: " . $user["id"]);
 ?>
 <!DOCTYPE html>

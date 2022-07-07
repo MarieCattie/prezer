@@ -24,6 +24,7 @@ a {
     display: block;
     text-decoration: none;
 }
+
 .hidden {
     display: none !important;
 }
@@ -34,6 +35,10 @@ a {
     text-align: center;
     color: #171832;
 }
+.swiper {
+    width: 600px;
+    height: 300px;
+  }
 .postitle {
     font-size: 16px;
     text-align: center;
@@ -63,6 +68,7 @@ a {
     color: #FFFFFF;
 }
 .contact {
+    font-family: var(--font-decorative);
     position: relative;
     font-size: 18px;
     color: #171832;
@@ -106,9 +112,16 @@ a {
 .m-14 {
     margin-bottom: 14px;
 }
+.mr-15 {
+    margin-right: 15px;
+}
+.mr-30 {
+    margin-right: 30px;
+}
 /*//Margins and paddings*/
 /*Buttons*/
 .btn {
+    width: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -120,10 +133,13 @@ a {
     border-radius: 5px;
     transition: .2s ease-in-out;
     cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
 }
 .second-btn {
     color: #2D74FF;
     border: 2px solid #2D74FF;
+    padding: 13px 30px;
 }
 .second-btn:hover {
     color: #9E00FF;
@@ -137,6 +153,10 @@ a {
 }
 .action-btn:hover {
     background-position: 20% 50%;
+}
+.btn-medium {
+    min-width: 200px;
+    background-size: 500px;
 }
 .btn-large {
     width: 100%;
@@ -232,7 +252,7 @@ a {
 }
 .logo {
     width: 190px;
-    height: 120px;
+    /* height: 120px; */
 }
 .logo img {
     position: relative;
@@ -536,6 +556,7 @@ option.form__font-option {
     font-weight: bold;
     color: #ff0051;
 }
+
 /*//Style for popups and login/logout*/
 /*Profile*/
 .profile {

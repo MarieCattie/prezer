@@ -1,7 +1,7 @@
 <?php
 session_start();
 require "assets/php/Init.php";
-require "assets/php/functions.php";
+checkUser($user);
 ?>
 <!DOCTYPE html>
 <html lang="ru">

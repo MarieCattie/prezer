@@ -7,6 +7,7 @@
             <? } ?>
         </div>
         <div class="container-flex">
+            <a href="landing.php" class="btn second-btn mr-15">Перейти на главную</a>
             <a href="assets/php/logout.php" class="btn action-btn" id="exit">Выйти</a>
         </div>
     </div>

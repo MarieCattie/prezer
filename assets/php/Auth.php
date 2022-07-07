@@ -38,7 +38,7 @@ if(!$user)
     //REGISTRATION
     if(isset($_POST["register"]))
     {
-        $db->que("INSERT INTO `users`(`email`, `surname`, `name`, `phone`, `password`) VALUES('".$_POST["email"]."', '".$_POST["surname"]."', '".$_POST["name"]."', '".$_POST["phone"]."', '". md5($_POST["password"]) ."')");
+        $db->que("INSERT INTO `users`(`email`, `surname`, `name`, `password`) VALUES('".$_POST["email"]."', '".$_POST["surname"]."', '".$_POST["name"]."', '". md5($_POST["password"]) ."')");
         $_SESSION["message"] = "Вы успешно зарегистрированы. Войдите в аккаунт";
         header("Location: ../../login.php");
     }
