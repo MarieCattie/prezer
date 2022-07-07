@@ -221,7 +221,7 @@ require "assets/php/Init.php";
                         <img src="assets/img/landing/capabilities-3-excel.png" alt="">
                     </div>
                 </div>
-                <!-- //Возможности Элемент3 -->
+                <!-- //Возможности Элемент 3 -->
             </div>
         </div>
         <!-- //Возможности -->
